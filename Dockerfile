@@ -15,7 +15,7 @@ ENV PATH=${PATH}:${KAFKA_HOME}/bin
 
 COPY download-kafka.sh start-connect.sh versions.sh /tmp/
 
-RUN apk add --no-cache bash curl jq docker \
+RUN apk add --no-cache bash curl jq docker vim busybox-extras \
  && chmod a+x /tmp/*.sh \
  && mv /tmp/start-connect.sh /tmp/versions.sh /usr/bin \
  && sync \

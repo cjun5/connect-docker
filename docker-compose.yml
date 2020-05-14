@@ -6,7 +6,7 @@ services:
       - "2181:2181"
   kafka:
     build:
-      context: https://github.com/wurstmeister/kafka-docker.git
+      context: https://github.com/wurstmeister/kafka-docker.git#a88b071fe48446abeb685c6a13b5496f1654c2f8
     depends_on:
       - zookeeper
     ports:
